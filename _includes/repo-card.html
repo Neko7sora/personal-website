@@ -12,8 +12,8 @@
   </div>
   <div class="d-flex f6">
     {% if repository.language %}
-        <span class="repo-language-color ml-0 mr-1" style="text-white background-color:{{ site.data.colors[repository.language]["color"] }}"></span>
-        <span class="mr-3" itemprop="programmingLanguage">{{ repository.language }}</span>
+        <span class="repo-language-color ml-0 mr-1" style="background-color:{{ site.data.colors[repository.language]["color"] }}; border:1px solid #f0f6fc33"></span>
+        <span class="mr-3 text-white" itemprop="programmingLanguage">{{ repository.language }}</span>
     {% endif %}
       <a href="{{ repository.html_url }}/stargazers" class="text-white d-inline-block mr-4" style="color: #58a6ff">
         {% octicon star-fill height:16 class="octicon octicon-star mr-1" fill:"#8b949e" aria-label:star-fill %}
