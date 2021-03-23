@@ -15,17 +15,13 @@
         <span class="repo-language-color ml-0 mr-1" style="background-color:{{ site.data.colors[repository.language]["color"] }}"></span>
         <span class="mr-3" itemprop="programmingLanguage">{{ repository.language }}</span>
     {% endif %}
-    {% if repository.stargazers_count %}
       <a href="{{ repository.html_url }}/stargazers" class="d-inline-block link-gray mr-4" {% if site.style == 'dark' %}style="color: #58a6ff"{% endif %}>
         {% octicon star-fill height:16 class="octicon octicon-star mr-1" fill:"{% if site.style == 'dark' %}#8b949e{% else %}#586069{% endif %}" aria-label:star-fill %}
         {{ repository.stargazers_count }}
       </a>
-    {% endif %}
-    {% if repository.forks_count %}
       <a href="{{ repository.html_url }}/network/members" class="d-inline-block link-gray mr-4" {% if site.style == 'dark' %}style="color: #58a6ff"{% endif %}>
         {% octicon git-branch height:16 class="octicon octicon-git-branch mr-1" fill:"{% if site.style == 'dark' %}#8b949e{% else %}#586069{% endif %}" aria-label:git-branch %}
         {{ repository.forks_count }}
       </a>
-    {% endif %}
   </div>
 </div>
