@@ -79,5 +79,7 @@
 
 body{
   // ビヨヨン効果を無効化する
-    overscroll-behavior: none;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
 }
