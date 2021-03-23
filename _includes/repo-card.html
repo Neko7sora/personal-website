@@ -3,7 +3,7 @@
     <div class="d-flex flex-justify-between flex-items-start mb-1">
       <h1 class="f4 lh-condensed mb-1">
         <a href="{{ repository.html_url }}" {% if site.style == 'dark' %}style="color: #58a6ff"{% endif %}>
-          {% octicon repo height:20 class:"mr-1 v-align-middle" fill:"{% if site.style == 'dark' %}#8b949e{% else %}#586069{% endif %}" aria-label:repo %}
+          {% octicon repo height:20 class:"mr-1 v-align-middle" fill:"#8b949e" aria-label:repo %}
           {{ repository.name }}
         </a>
       </h1>
@@ -16,11 +16,11 @@
         <span class="mr-3" itemprop="programmingLanguage">{{ repository.language }}</span>
     {% endif %}
       <a href="{{ repository.html_url }}/stargazers" class="d-inline-block link-gray mr-4" {% if site.style == 'dark' %}style="color: #58a6ff"{% endif %}>
-        {% octicon star-fill height:16 class="octicon octicon-star mr-1" fill:"{% if site.style == 'dark' %}#8b949e{% else %}#586069{% endif %}" aria-label:star-fill %}
+        {% octicon star-fill height:16 class="octicon octicon-star mr-1" fill:"#8b949e" aria-label:star-fill %}
         {{ repository.stargazers_count }}
       </a>
       <a href="{{ repository.html_url }}/network/members" class="d-inline-block link-gray mr-4" {% if site.style == 'dark' %}style="color: #58a6ff"{% endif %}>
-        {% octicon git-branch height:16 class="octicon octicon-git-branch mr-1" fill:"{% if site.style == 'dark' %}#8b949e{% else %}#586069{% endif %}" aria-label:git-branch %}
+        {% octicon git-branch height:16 class="octicon octicon-git-branch mr-1" fill:"#8b949e" aria-label:git-branch %}
         {{ repository.forks_count }}
       </a>
   </div>
