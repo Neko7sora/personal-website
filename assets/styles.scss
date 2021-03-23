@@ -76,3 +76,9 @@
    scrollbar-width:thin;
    scrollbar-color:rgba(50,50,50,0.5) transparent;
 }
+
+body{
+  // ビヨヨン効果を無効化する
+    position:fixed;
+    overscroll-behavior: none;
+}
