@@ -31,9 +31,9 @@ projects:
 social_media:
   # behance: your_username
   # dribbble: your_username
-  # facebook: your_username
+    facebook: NekomiyaSorato
   # hackerrank: your_username
-  # instagram: your_username
+    instagram: neko7sora
   # keybase: your_username
   # linkedin: your_username
    # mastodon: Neko7sora
@@ -43,7 +43,7 @@ social_media:
     twitter: Neko7sora
   # unsplash: your_username
   # vk: your_username
-    website: https://neko7sora.page.link/resume
+    website: https://links.neko7sora.jp/resume
   #  youtube: Neko7sora
 
 #topics:
