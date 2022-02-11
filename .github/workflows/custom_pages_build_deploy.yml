@@ -1,7 +1,8 @@
-name: "main"
+name: "pages build and deployment custom"
 on:
   workflow_dispatch:
   push:
+    branches: [ master ]
   schedule:
     # Every 30 min
     - cron:  '*/30 * * * *'
@@ -41,4 +42,5 @@ jobs:
 
     steps:
       - uses: actions/deploy-pages@v1
+        id: deployment
         name: Deploy to GitHub Pages
