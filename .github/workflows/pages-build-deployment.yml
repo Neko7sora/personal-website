@@ -1,4 +1,4 @@
-name: "pages build and deployment custom"
+name: "pages build and deployment"
 on:
   workflow_dispatch:
   push:
@@ -16,13 +16,19 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Build page with Jekyll
       - uses: actions/jekyll-build-pages@v1
         with:
           source: .
           destination: ./_site
-      - run: tar --dereference --hard-dereference --directory _site/ -cvf artifact.tar .
-      - uses: actions/upload-artifact@v2
+      - name: Archive build output
+        run: tar --dereference --hard-dereference --directory _site/ -cvf artifact.tar .
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
         with:
           name: github-pages
           path: ./artifact.tar
