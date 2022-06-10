@@ -5,7 +5,7 @@ on:
     branches: [ master ]
   schedule:
     # Every 30 min
-    - cron:  '*/30 * * * *'
+    - cron:  '*/60 * * * *'
 
 
 jobs:
